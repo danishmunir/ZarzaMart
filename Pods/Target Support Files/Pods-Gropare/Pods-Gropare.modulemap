@@ -1,0 +1,6 @@
+framework module Pods_Gropare {
+  umbrella header "Pods-Gropare-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,111 @@
+PODS:
+  - CarbonKit (2.3.1)
+  - FSCalendar (2.8.1)
+  - IBAnimatable (6.1.0)
+  - KKPinCodeTextField (1.0.0)
+  - MaterialComponents/AnimationTiming (118.0.0)
+  - MaterialComponents/Availability (118.0.0)
+  - MaterialComponents/Buttons (118.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (118.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (118.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/OverlayWindow (118.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Application (118.0.0)
+  - MaterialComponents/private/Color (118.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (118.0.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (118.0.0)
+  - MaterialComponents/private/Overlay (118.0.0)
+  - MaterialComponents/Ripple (118.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (118.0.0)
+  - MaterialComponents/ShadowLayer (118.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (118.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (118.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Snackbar (118.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/OverlayWindow
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Overlay
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+  - MaterialComponents/Typography (118.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
+  - razorpay-pod (1.1.7)
+  - SDWebImage (5.9.2):
+    - SDWebImage/Core (= 5.9.2)
+  - SDWebImage/Core (5.9.2)
+
+DEPENDENCIES:
+  - CarbonKit
+  - FSCalendar
+  - IBAnimatable
+  - KKPinCodeTextField
+  - MaterialComponents/Snackbar
+  - razorpay-pod (~> 1.1.5)
+  - SDWebImage (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - CarbonKit
+    - FSCalendar
+    - IBAnimatable
+    - KKPinCodeTextField
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
+    - razorpay-pod
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
+  KKPinCodeTextField: 63a1fb841fd6a412cf664ef64dc065fc6767bd3c
+  MaterialComponents: 333a09d55de4bc53e0e2e08f178c6f29cfe8645f
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  razorpay-pod: 6ee0c8c7afad8eead9524d5eb516bc35ac1604ef
+  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+
+PODFILE CHECKSUM: f462481651154e65b21344c4a1ec3201ba72e18e
+
+COCOAPODS: 1.9.3

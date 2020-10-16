@@ -1,0 +1,6 @@
+framework module Pods_Gropare_GropareUITests {
+  umbrella header "Pods-Gropare-GropareUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
