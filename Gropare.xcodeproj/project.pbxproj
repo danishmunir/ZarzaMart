@@ -380,10 +380,10 @@
 				F7F3BA8825370D8F005B1BC6 /* TermsAndPolicyViewController.swift */,
 				F7F3BAE525372160005B1BC6 /* WalletViewController.swift */,
 				F7F3BAEA253721D2005B1BC6 /* RewardViewController.swift */,
-				F7B4C5F725384C4D002C7280 /* ProductViewController.swift */,
 				F70D05EC2538A3D500D3859C /* OrderSummaryViewController.swift */,
-				F7F571B12539D3950039980F /* SubSubCatagoryViewController.swift */,
 				4FAA53A7253A0E3D00B2F7FB /* ViewAllSearchProductsViewController.swift */,
+				F7F571B12539D3950039980F /* SubSubCatagoryViewController.swift */,
+				F7B4C5F725384C4D002C7280 /* ProductViewController.swift */,
 				4FAA53BC253A2D7400B2F7FB /* searchProductViewController.swift */,
 			);
 			path = Controllers;
@@ -1130,12 +1130,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 7257DHNQZP;
 				INFOPLIST_FILE = Gropare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarzamart.astuteo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1150,12 +1152,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 7257DHNQZP;
 				INFOPLIST_FILE = Gropare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarzamart.astuteo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

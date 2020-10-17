@@ -741,8 +741,9 @@ extension LandingViewController{
         actionButton.buttonColor = UIColor(named: "Greenish")!
         actionButton.buttonImage = #imageLiteral(resourceName: "support-1")
                 actionButton.addItem(image: #imageLiteral(resourceName: "call_answer")) { item in
-                    self.showAlert("+91 99955 14341")
-                    
+                    guard let number = URL(string: "tel://" + "+919995514341") else { return }
+                    UIApplication.shared.open(number)
+                
                 }
 
                 actionButton.addItem(image: #imageLiteral(resourceName: "reviews")) { item in

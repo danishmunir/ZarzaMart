@@ -36,14 +36,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E999681D-EDC9-45FB-A8D9-94B932077715 - e39ab4af65131991"
+                  uuid = "E999681D-EDC9-45FB-A8D9-94B932077715 - 1324adbc47d46dd2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gropare.AddressVC.serverHitForSociety() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "148"
@@ -51,14 +51,14 @@
                   offsetFromSymbolStart = "1512">
                </Location>
                <Location
-                  uuid = "E999681D-EDC9-45FB-A8D9-94B932077715 - 77ec2dd52ae534a9"
+                  uuid = "E999681D-EDC9-45FB-A8D9-94B932077715 - 875234c608224054"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Gropare.Society_Data) -&gt; () in closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gropare.AddressVC.serverHitForSociety() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "149"
@@ -116,14 +116,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7BEEF8E5-92AE-49F1-A80C-BE429F3FE9AC - 3d70d94928420de9"
+                  uuid = "7BEEF8E5-92AE-49F1-A80C-BE429F3FE9AC - cdcec05a0a857126"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Gropare.AddressVC.serverHitForSociety() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "142"
@@ -131,14 +131,14 @@
                   offsetFromSymbolStart = "265">
                </Location>
                <Location
-                  uuid = "7BEEF8E5-92AE-49F1-A80C-BE429F3FE9AC - 3d70d94928420de9"
+                  uuid = "7BEEF8E5-92AE-49F1-A80C-BE429F3FE9AC - cdcec05a0a857126"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Gropare.AddressVC.serverHitForSociety() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "142"
@@ -146,14 +146,14 @@
                   offsetFromSymbolStart = "509">
                </Location>
                <Location
-                  uuid = "7BEEF8E5-92AE-49F1-A80C-BE429F3FE9AC - e39ab4af6513163a"
+                  uuid = "7BEEF8E5-92AE-49F1-A80C-BE429F3FE9AC - 1324adbc47d46a77"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gropare.AddressVC.serverHitForSociety() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "143"
@@ -227,14 +227,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AA1740E7-9775-4BD4-90F4-A48415FD72A8 - c11b199cbcbccd66"
+                  uuid = "AA1740E7-9775-4BD4-90F4-A48415FD72A8 - 31a5008f9e7ba123"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Gropare.AddressVC.serverHitForEditAddress() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "193"
@@ -242,14 +242,14 @@
                   offsetFromSymbolStart = "6025">
                </Location>
                <Location
-                  uuid = "AA1740E7-9775-4BD4-90F4-A48415FD72A8 - 151349bc9a61c90c"
+                  uuid = "AA1740E7-9775-4BD4-90F4-A48415FD72A8 - e5ad50afb8a6a54b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gropare.AddressVC.serverHitForEditAddress() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "194"
@@ -287,8 +287,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
             endingLineNumber = "199"
-            landmarkName = "AddressVC"
-            landmarkType = "21">
+            landmarkName = "serverHitForEditAddress()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -303,8 +303,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "201"
             endingLineNumber = "201"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "serverHitForEditAddress()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -339,14 +339,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5D7C82E2-E5B3-40FC-985F-37641F9CB0A8 - 1b2233fb8439d77"
+                  uuid = "5D7C82E2-E5B3-40FC-985F-37641F9CB0A8 - f10c3a2c9a84e928"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Gropare.AddressVC.serverHitForAddress() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "166"
@@ -354,14 +354,14 @@
                   offsetFromSymbolStart = "5864">
                </Location>
                <Location
-                  uuid = "5D7C82E2-E5B3-40FC-985F-37641F9CB0A8 - a782a3b91e5a413e"
+                  uuid = "5D7C82E2-E5B3-40FC-985F-37641F9CB0A8 - 573cbaaa3c9d3563"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gropare.AddressVC.serverHitForAddress() -&gt; ()"
                   moduleName = "Gropare"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/CheckOut/AddressVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "167"
@@ -399,8 +399,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
             endingLineNumber = "182"
-            landmarkName = "AddressVC"
-            landmarkType = "21">
+            landmarkName = "serverHitForAddress()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -470,17 +470,241 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B8C19FBA-F8FA-472A-8B8D-4FF381BE2FFD"
+            uuid = "1AA3F9E6-ED9A-4CBD-BDBE-A0CD31EE6B77"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gropare/Controllers/ProductViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "countBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABE8B2AD-D940-473D-80FD-14338BB3C928"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "countBtnTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABE8B2AD-D940-473D-80FD-14338BB3C928 - 3bff69624f6429b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Gropare.ProductViewController.countBtnTapped(Any) -&gt; ()"
+                  moduleName = "Gropare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "1298">
+               </Location>
+               <Location
+                  uuid = "ABE8B2AD-D940-473D-80FD-14338BB3C928 - 3bff69624f6429b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Gropare.ProductViewController.countBtnTapped(Any) -&gt; ()"
+                  moduleName = "Gropare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Playground/Danish/Danish/Danish%20programs/One%20by%20one%20Data/this%20is%20all%20data/Itrid%20Office%20Projects/Gropare%20App/Done/Gropare/Gropare/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "1537">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95D15C8B-7639-44F6-A62A-B442CCCCDF3F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "subBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F42A7CDC-7576-4D9A-A720-CC7117186251"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "subBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CA6C5A5-2F28-4D37-8B5D-06D411B0FDA5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/searchProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "countBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFA02A9A-94CA-4A41-91BF-8BD5F0EC1FB7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/searchProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "countBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E45B8634-019D-452C-A506-85DC549F8FB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/searchProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "countBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82ECD84A-78C3-47ED-AAE0-89CC5DCB009A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/CheckOut/CheckoutVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "serverHitForCheckOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "748B1BFC-B02C-416A-882A-9C8777A576FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/CheckOut/CheckoutVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "serverHitForCheckOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CA5A661-247B-40EF-BDB4-F5D260A38227"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/CheckOut/CheckoutVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "serverHitForCheckOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7EA6887-C8D4-4403-9762-3095811E9D57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/CheckOut/CheckoutVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "serverHitForCheckOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9525C9AF-EACB-4207-AD6B-6C10FDA8AE28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/CheckOut/CheckoutVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "serverHitForCheckOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9E82D65-B5B6-4B83-9D8A-A900F3D80F05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gropare/Controllers/CheckOut/CheckoutVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "serverHitForCheckOut()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

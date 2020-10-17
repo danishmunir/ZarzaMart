@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialSnackbar
+
 
 class ProfileTableViewController: UITableViewController {
     let http = HTTPService()
@@ -17,6 +19,8 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var smsSwitch: UISwitch!
     @IBOutlet weak var inAppSwitch: UISwitch!
     
+    let snackManager = MDCSnackbarManager()
+    let snackBarMessage = MDCSnackbarMessage()
     var emailSwitchInt = Int()
     var inAppSwitchInt = Int()
     var smsSwitchInt = Int()
@@ -93,6 +97,7 @@ extension ProfileTableViewController {
                         nameTF.text = objData.userName
                         emailTF.text = objData.userEmail
                         phoneTF.text = objData.userPhone
+                        snackBarMessage(snackManager: snackManager, snackBarMessage: snackBarMessage, title: "Profile Updated")
                     }
                     else{
                         print(error?.localizedDescription as Any)
@@ -152,7 +157,7 @@ extension ProfileTableViewController {
         
         let dict =  ["user_id": UserDefaults.standard.string(forKey: "user_id")!, "sms" : smsSwitchInt , "app" : inAppSwitchInt , "email" : 0] as [String : Any]
         http.requestWithPost(parameters: dict as [String : Any], Url: Endpoints.updateNotify) { (response, error) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 let jsonData = response?.toJSONString1().data(using: .utf8)
                 let decoder = JSONDecoder()
                 do {
@@ -160,6 +165,7 @@ extension ProfileTableViewController {
                     if let objData = obj.data{
                         if objData == 1 {
                             print(obj.message!)
+                            snackBarMessage(snackManager: snackManager, snackBarMessage: snackBarMessage, title: "Profile Updated")
                             
                         } else {
                             print(obj.message!)

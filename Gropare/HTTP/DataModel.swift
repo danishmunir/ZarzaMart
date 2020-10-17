@@ -695,7 +695,57 @@ struct Delivery_Data: Codable {
         case delCharge = "del_charge"
     }
 }
+// MARK: - Make_On_Order
+struct Make_On_Order1: Codable {
+    let status, message: String?
+    let data: Make_On_Order_Detail1?
+}
 
+// MARK: - DataClass
+struct Make_On_Order_Detail1: Codable {
+    let orderID, userID, storeID, addressID: Int?
+    let cartID: String?
+    let totalPrice, priceWithoutDelivery, totalProductsMrp: Int?
+    let paymentMethod: String?
+    let paidByWallet, remPrice: Int?
+    let orderDate, deliveryDate: String?
+    let deliveryCharge: Int?
+    let timeSlot: String?
+    let dboyID: Int?
+    let orderStatus: String?
+    let userSignature, cancellingReason: JSONNull?
+    let couponID, couponDiscount: Int?
+    let paymentStatus: String?
+    let cancelByStore: Int?
+    let updatedAt: JSONNull?
+
+    enum CodingKeys: String, CodingKey {
+        case orderID = "order_id"
+        case userID = "user_id"
+        case storeID = "store_id"
+        case addressID = "address_id"
+        case cartID = "cart_id"
+        case totalPrice = "total_price"
+        case priceWithoutDelivery = "price_without_delivery"
+        case totalProductsMrp = "total_products_mrp"
+        case paymentMethod = "payment_method"
+        case paidByWallet = "paid_by_wallet"
+        case remPrice = "rem_price"
+        case orderDate = "order_date"
+        case deliveryDate = "delivery_date"
+        case deliveryCharge = "delivery_charge"
+        case timeSlot = "time_slot"
+        case dboyID = "dboy_id"
+        case orderStatus = "order_status"
+        case userSignature = "user_signature"
+        case cancellingReason = "cancelling_reason"
+        case couponID = "coupon_id"
+        case couponDiscount = "coupon_discount"
+        case paymentStatus = "payment_status"
+        case cancelByStore = "cancel_by_store"
+        case updatedAt = "updated_at"
+    }
+}
 // MARK: - Make_On_Order
 struct Make_On_Order: Codable {
     let status, message: String?
@@ -716,7 +766,7 @@ struct Make_On_Order_Detail: Codable {
     let orderStatus: String?
     let userSignature, cancellingReason: JSONNull?
     let couponID, couponDiscount: Int?
-    let paymentStatus: String?
+    let paymentStatus: JSONNull?
     let cancelByStore: Int?
     let updatedAt: JSONNull?
 

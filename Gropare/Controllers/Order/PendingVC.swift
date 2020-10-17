@@ -47,7 +47,7 @@ class PendingVC: UIViewController {
     }
     
     @IBAction func yesAction(_ sender: UIButton) {
-        let storyboard = UIStoryboard.init(name: "Checkout", bundle: nil)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CoupenVC") as! CoupenVC
         viewController.cancelCartID = self.deletCartId
          self.viewAlertVC.isHidden = false

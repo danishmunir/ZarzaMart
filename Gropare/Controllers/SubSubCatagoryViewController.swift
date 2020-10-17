@@ -10,7 +10,7 @@ import CoreData
 import SDWebImage
 
 class SubSubCatagoryViewController: UIViewController {
-    
+    var btnTitile = Int()
     var arrCart = [CartItem]()
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var kg: UILabel!
@@ -46,14 +46,14 @@ class SubSubCatagoryViewController: UIViewController {
             price.text = "\(Double((products?.price!)!) * Double(count))"
             countBtn.setTitle(String(count), for: .normal)
             countBtn.backgroundColor = .white
-            //addBtn.isHidden = false
-            //subBtn.isHidden = false
+            addBtn.isHidden = false
+            subBtn.isHidden = false
         } else {
             price.text = "\(products?.price ?? 0)"
             countBtn.setTitle("+", for: .normal)
             countBtn.backgroundColor = UIColor(named: "Greenish")
-            //addBtn.isHidden = true
-            //subBtn.isHidden = true
+            addBtn.isHidden = true
+            subBtn.isHidden = true
         }
     }
     
@@ -65,13 +65,57 @@ class SubSubCatagoryViewController: UIViewController {
     }
     
     @IBAction func addBtnTapped(_ sender: UIButton) {
-       
+        let name = products?.productName!
+        let vid = products?.varientID!
+        saveData(productName: name!, variendID: vid!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+             btnTitile = Int((countBtn.titleLabel?.text)!)!
+             let vid =  products?.varientID!
+            let sid = products?.storeID!
+            addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
+            let count = searchItemInCart(vId: vid!)
+            countBtn.setTitle("\(count)", for: .normal)
+        }
     }
     @IBAction func countBtnTapped(_ sender: Any) {
-        
+        let name = products?.productName!
+        let vid = products?.varientID!
+        saveData(productName: name!, variendID: vid!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            if countBtn.titleLabel?.text! == "+"{
+                 btnTitile = Int("1")!
+            }
+            else{
+                 btnTitile = Int((countBtn.titleLabel?.text)!)!
+            
+            }
+            countBtn.setTitle(String(btnTitile), for: .normal)
+            addBtn.isHidden = false
+            subBtn.isHidden = false
+             let vid =  products?.varientID!
+            let sid = products?.storeID!
+            addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
+        }
     }
     @IBAction func subBtnTapped(_ sender: Any) {
         deleteFeed(id: (products?.varientID!)!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+            btnTitile = Int((countBtn.titleLabel?.text)!)!
+            let vid =  products?.varientID!
+            let sid = products?.storeID!
+        if countBtn.titleLabel?.text! != "1"{
+            addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
+            let count = searchItemInCart(vId: vid!)
+            countBtn.setTitle("\(count)", for: .normal)
+            }
+            else {
+                countBtn.setTitle("+", for: .normal)
+                countBtn.backgroundColor = UIColor(named: "Greenish")
+                addItemsServerHit(qty: 0, varient_id: vid!, store_id: sid!)
+                addBtn.isHidden = true
+                subBtn.isHidden = true
+            }
+        }
         
     }
     
@@ -110,7 +154,7 @@ extension SubSubCatagoryViewController: UITableViewDelegate, UITableViewDataSour
 
 //MARK: Core Data Save,Fetch And Search
 extension SubSubCatagoryViewController {
-    func saveData1(productName : String , variendID : Int)
+    func saveData(productName : String , variendID : Int)
     {
         context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Cart", in: context)
@@ -173,6 +217,7 @@ extension SubSubCatagoryViewController {
                     print(v as Any)
                 }
                 count = result.count
+                countBtn.titleLabel?.text = "\(count)"
             } else {
                 
             }

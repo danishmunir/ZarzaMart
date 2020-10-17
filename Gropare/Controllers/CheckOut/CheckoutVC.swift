@@ -138,7 +138,7 @@ class CheckoutVC: UIViewController, MyPromocodeAccess {
             setGradientBackground(view1: btnCard, colorTop: #colorLiteral(red: 0.9176587462, green: 0.7964373231, blue: 0.5519171953, alpha: 1), colorBottom: #colorLiteral(red: 0.9893639684, green: 0.5103693604, blue: 0, alpha: 1))
 
         case btnCode:
-            let storyboard = UIStoryboard.init(name: "Checkout", bundle: nil)
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "CoupenVC") as! CoupenVC
             viewController.isCoupen = true
             viewController.delegate = self
@@ -228,7 +228,7 @@ extension CheckoutVC {
       
                 let jsonData = responseData?.toJSONString1().data(using: .utf8)!
                 let decoder = JSONDecoder()
-                let obj = try! decoder.decode(Make_On_Order.self, from: jsonData!)
+                let obj = try! decoder.decode(Make_On_Order1.self, from: jsonData!)
                 if obj.status == "1"{
                     self.deleteFeed()
                     let storyboard = UIStoryboard.init(name: "Checkout", bundle: nil)

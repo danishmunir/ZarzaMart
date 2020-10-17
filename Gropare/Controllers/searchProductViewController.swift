@@ -28,7 +28,7 @@ class searchProductViewController: UIViewController {
     @IBOutlet weak var countBtn: UIButton!
     var selectedIndex = Int()
     var productsArray = [Products_Data]()
-    
+    var btnTitile = Int()
     //MARK:- CoreData
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate //Singlton instance
@@ -45,14 +45,14 @@ class searchProductViewController: UIViewController {
             price.text = "\(Double((arrListing[0].price!)) * Double(count))"
             countBtn.setTitle(String(count), for: .normal)
             countBtn.backgroundColor = .white
-            //addBtn.isHidden = false
-            //subBtn.isHidden = false
+            addBtn.isHidden = false
+            subBtn.isHidden = false
         } else {
             price.text = "\(arrListing[0].price ?? 0)"
             countBtn.setTitle("+", for: .normal)
             countBtn.backgroundColor = UIColor(named: "Greenish")
-            //addBtn.isHidden = true
-            //subBtn.isHidden = true
+            addBtn.isHidden = true
+            subBtn.isHidden = true
         }
     }
     
@@ -71,8 +71,9 @@ class searchProductViewController: UIViewController {
              let btnTitile = Int((countBtn.titleLabel?.text)!)!
              let vid =  arrListing[0].varientID
             let sid = arrListing[0].storeID
-            
             addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
+            let count = searchItemInCart(vId: vid!)
+            countBtn.setTitle("\(count)", for: .normal)
         }
     }
     @IBAction func countBtnTapped(_ sender: Any) {
@@ -80,7 +81,6 @@ class searchProductViewController: UIViewController {
         let vid = arrListing[0].varientID!
         saveData(productName: name, variendID: vid)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-            var btnTitile = Int()
             if countBtn.titleLabel?.text! == "+"{
                  btnTitile = Int("1")!
              
@@ -89,6 +89,9 @@ class searchProductViewController: UIViewController {
                  btnTitile = Int((countBtn.titleLabel?.text)!)!
             
             }
+            
+            let count = searchItemInCart(vId: vid)
+            countBtn.setTitle(String(count), for: .normal)
             addBtn.isHidden = false
             subBtn.isHidden = false
              
@@ -101,16 +104,17 @@ class searchProductViewController: UIViewController {
     }
     @IBAction func subBtnTapped(_ sender: Any) {
         deleteFeed(id: (arrListing[0].varientID!))
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-            let btnTitile = Int((countBtn.titleLabel?.text)!)!
             let vid =  arrListing[0].varientID!
             let sid = arrListing[0].storeID!
-        if countBtn.titleLabel?.text! != "+"{
+        if countBtn.titleLabel?.text! != "1"{
             addItemsServerHit(qty: btnTitile, varient_id: vid, store_id: sid)
+            let count = searchItemInCart(vId: vid)
+            countBtn.setTitle("\(count)", for: .normal)
             }
             else {
                 addItemsServerHit(qty: 0, varient_id: vid, store_id: sid)
+                countBtn.setTitle("+", for: .normal)
                 addBtn.isHidden = true
                 subBtn.isHidden = true
             }
@@ -278,6 +282,7 @@ extension searchProductViewController {
                     print(v as Any)
                 }
                 count = result.count
+                countBtn.titleLabel?.text = "\(count)"
             } else {
                 
             }
@@ -330,7 +335,6 @@ extension searchProductViewController {
                         arrCart.append($0)
                     }
                     tableView.reloadData()
-                    searchItemInCart(vId: varient_id)
                 }
             }
             else{

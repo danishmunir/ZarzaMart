@@ -9,6 +9,7 @@
 import UIKit
 import FSCalendar
 import SDWebImage
+import MaterialComponents.MaterialSnackbar
 
 class OrderSummaryViewController: UIViewController, UIGestureRecognizerDelegate{
     
@@ -29,6 +30,8 @@ class OrderSummaryViewController: UIViewController, UIGestureRecognizerDelegate{
     
     
     let http = HTTPService()
+    let snackManager = MDCSnackbarManager()
+    let snackBarMessage = MDCSnackbarMessage()
     var selectedShowAddressData = [Address_List]()
     var selectedDatesFormat = ""
     var arrTimeslot = [String]()
@@ -67,10 +70,10 @@ class OrderSummaryViewController: UIViewController, UIGestureRecognizerDelegate{
         collectionViewItems.dataSource = self
         self.lblTotalItem.text = "Basket items ( \(arrCartData.count) )"
         selectedDatesFormat = calender.today.map({self.dateFormatter.string(from: $0)})!
-//        if selectedDatesFormat != "" {
-//            serverHitTimeSlotList()
-//        }
-//
+        if selectedDatesFormat != "" {
+            serverHitTimeSlotList()
+        }
+
         serverHitDelivary()
         
         // Do any additional setup after loading the view.
@@ -206,7 +209,7 @@ extension OrderSummaryViewController {
         
         
         http.requestWithPost(parameters: dict, Url: Endpoints.timeslot) { (responseData, error) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 let jsonData = responseData?.toJSONString1().data(using: .utf8)!
                 let decoder = JSONDecoder()
                 let obj = try! decoder.decode(Timeslot.self, from: jsonData!)
@@ -222,7 +225,8 @@ extension OrderSummaryViewController {
                     }
                     
                 } else {
-                    print("Error")
+                    snackBarMessage(snackManager: snackManager, snackBarMessage: snackBarMessage, title: "\(obj.message)")
+                    
                 }
             }
         }
@@ -284,32 +288,38 @@ extension OrderSummaryViewController {
     // Make on Order
         func serverHitForMakeanOrder(){
             // email, password, Auth-key
-            let dict = ["time_slot": "12:00","user_id": UserDefaults.standard.string(forKey: "user_id")!, "delivery_date": selectedDatesFormat, "store_id": 2] as [String : Any]
+            let dict = ["time_slot": timeSlot,"user_id": UserDefaults.standard.string(forKey: "user_id")!, "delivery_date": selectedDatesFormat, "store_id": 2] as [String : Any]
             //"ddk_wallet_id":txtFldDDDKWalletID.text!,
             http.requestWithPost(parameters: dict, Url: Endpoints.ios_make_order) { (responseData, error) in
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     let jsonData = responseData?.toJSONString1().data(using: .utf8)!
                     let decoder = JSONDecoder()
-                    let obj = try! decoder.decode(Make_On_Order.self, from: jsonData!)
-                    if obj.status == "1"{
-                        if let cartID = obj.data?.cartID {
-                            saveStringInDefault(value: cartID, key: "cartID")
-                        } else {
-                            saveStringInDefault(value: "", key: "cartID")
-                        }
-                        
-                        if let orderID = obj.data?.orderID {
-                            saveStringInDefault(value: orderID, key: "orderID")
-                        } else {
-                            saveStringInDefault(value: "", key: "orderID")
-                        }
-                        let storyboard = UIStoryboard.init(name: "Checkout", bundle: nil)
-                        let viewController = storyboard.instantiateViewController(withIdentifier: "CheckoutVC") as! CheckoutVC
-                        self.navigationController?.pushViewController(viewController, animated: true)
-                        
-                    } else{
+                    do{
+                        let obj = try decoder.decode(Make_On_Order.self, from: jsonData!)
+                        if obj.status == "1"{
+                            if let cartID = obj.data?.cartID {
+                                saveStringInDefault(value: cartID, key: "cartID")
+                            } else {
+                                saveStringInDefault(value: "", key: "cartID")
+                            }
+                            
+                            if let orderID = obj.data?.orderID {
+                                saveStringInDefault(value: orderID, key: "orderID")
+                            } else {
+                                saveStringInDefault(value: "", key: "orderID")
+                            }
+                            let storyboard = UIStoryboard.init(name: "Checkout", bundle: nil)
+                            let viewController = storyboard.instantiateViewController(withIdentifier: "CheckoutVC") as! CheckoutVC
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                    }else{
                         print("error")
                     }
+                    }
+                        catch{
+                            snackBarMessage(snackManager: snackManager, snackBarMessage: snackBarMessage, title: "Something went Wrong")
+                        }
+
+                    
                 }
 
             }

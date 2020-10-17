@@ -113,6 +113,14 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 else {
                     addItemsServerHit(qty: 0 , varient_id: arrCart[indexPath.row].varientID!, store_id: 2)
+                    DispatchQueue.main.async {
+                        arrCart.removeAll()
+                        priceLabel.text = "Price is \(0)"
+                        noOfItemsLabel.text = "no of items are : \(0)"
+
+                        tableView.reloadData()
+                    }
+                   
                 }
             }
         }

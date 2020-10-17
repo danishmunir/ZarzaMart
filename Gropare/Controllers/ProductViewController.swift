@@ -29,7 +29,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var countBtn: UIButton!
     var selectedIndex = Int()
     var productsArray = [Products_Data]()
-    
+    var btnTitile = Int()
     //MARK:- CoreData
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate //Singlton instance
@@ -50,14 +50,14 @@ class ProductViewController: UIViewController {
             price.text = "\(Double((products?.price!)!) * Double(count))"
             countBtn.setTitle(String(count), for: .normal)
             countBtn.backgroundColor = .white
-           // addBtn.isHidden = false
-           // subBtn.isHidden = false
+            addBtn.isHidden = false
+            subBtn.isHidden = false
         } else {
             price.text = "\(products?.price ?? 0)"
             countBtn.setTitle("+", for: .normal)
             countBtn.backgroundColor = UIColor(named: "Greenish")
-           // addBtn.isHidden = true
-           // subBtn.isHidden = true
+            addBtn.isHidden = true
+            subBtn.isHidden = true
         }
     }
     
@@ -73,11 +73,12 @@ class ProductViewController: UIViewController {
         let vid = products?.varientID!
         saveData(productName: name!, variendID: vid!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-             let btnTitile = Int((countBtn.titleLabel?.text)!)!
+             btnTitile = Int((countBtn.titleLabel?.text)!)!
              let vid =  products?.varientID!
             let sid = products?.storeID!
-            
             addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
+            let count = searchItemInCart(vId: vid!)
+            countBtn.setTitle("\(count)", for: .normal)
         }
     }
     @IBAction func countBtnTapped(_ sender: Any) {
@@ -85,21 +86,18 @@ class ProductViewController: UIViewController {
         let vid = products?.varientID!
         saveData(productName: name!, variendID: vid!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-            var btnTitile = Int()
             if countBtn.titleLabel?.text! == "+"{
                  btnTitile = Int("1")!
-             
             }
             else{
                  btnTitile = Int((countBtn.titleLabel?.text)!)!
             
             }
+            countBtn.setTitle(String(btnTitile), for: .normal)
             addBtn.isHidden = false
             subBtn.isHidden = false
-             
              let vid =  products?.varientID!
             let sid = products?.storeID!
-            
             addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
         }
         
@@ -107,13 +105,17 @@ class ProductViewController: UIViewController {
     @IBAction func subBtnTapped(_ sender: Any) {
         deleteFeed(id: (products?.varientID!)!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-            let btnTitile = Int((countBtn.titleLabel?.text)!)!
+            btnTitile = Int((countBtn.titleLabel?.text)!)!
             let vid =  products?.varientID!
             let sid = products?.storeID!
-        if countBtn.titleLabel?.text! != "+"{
+        if countBtn.titleLabel?.text! != "1"{
             addItemsServerHit(qty: btnTitile, varient_id: vid!, store_id: sid!)
+            let count = searchItemInCart(vId: vid!)
+            countBtn.setTitle("\(count)", for: .normal)
             }
             else {
+                countBtn.setTitle("+", for: .normal)
+                countBtn.backgroundColor = UIColor(named: "Greenish")
                 addItemsServerHit(qty: 0, varient_id: vid!, store_id: sid!)
                 addBtn.isHidden = true
                 subBtn.isHidden = true
@@ -287,7 +289,6 @@ extension ProductViewController {
                     print(v as Any)
                 }
                 count = result.count
-                countBtn.titleLabel?.text = "\(count)"
             } else {
                 
             }
@@ -340,7 +341,6 @@ extension ProductViewController {
                         arrCart.append($0)
                     }
                     tableView.reloadData()
-                    searchItemInCart(vId: varient_id)
                 }
             }
             else{
