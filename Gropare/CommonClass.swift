@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import MaterialComponents.MaterialSnackbar
 var storID = String()
 var tolalItemPrice = Int()
 var paymentMetod = String()
@@ -50,4 +50,10 @@ func setGradientBackground(view1 : UIView, colorTop: UIColor, colorBottom: UICol
     view1.layer.addSublayer(gradientLayer)
   //  view1.layer.insertSublayer(gradientLayer, at: 0)
 
+}
+
+func snackBarMessage(snackManager: MDCSnackbarManager, snackBarMessage: MDCSnackbarMessage, title : String) { snackBarMessage.text = title
+    snackBarMessage.duration = 3
+    MDCSnackbarMessageView.appearance().snackbarMessageViewBackgroundColor = UIColor(named: "Pinkish")
+    snackManager.show(snackBarMessage)
 }

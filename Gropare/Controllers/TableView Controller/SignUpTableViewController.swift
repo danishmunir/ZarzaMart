@@ -26,9 +26,15 @@ class SignUpTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpBtn.layer.cornerRadius = 5
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
     }
-    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+        
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
@@ -45,12 +51,14 @@ class SignUpTableViewController: UITableViewController {
     }
     
     @IBAction func signUpBtntapped(_ sender: Any) {
+        
+        
         let userName = userNameTF.text ?? ""
         let mobileNo = mobileNoTF.text ?? ""
         let email = emailTF.text ?? ""
         let password = passwordTF.text ?? ""
         
-        if userName != "" && mobileNo != "" && email != "" && password != "" {
+        if userName != "" && mobileNo != "" && email != "" && password != ""{
             http.requestWithPost(parameters: ["user_email": email, "user_password": password, "user_name": userName, "user_phone": mobileNo , "device_id" : "iphone 8"], Url: Endpoints.resgister_ios) { [self] (response, error) in
                 dump(response)
                 if response != nil {
@@ -71,13 +79,13 @@ class SignUpTableViewController: UITableViewController {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                             let story = UIStoryboard(name: "Main", bundle: nil)
                             let vc = story.instantiateViewController(identifier: "OTPVerificationTableViewController") as! OTPVerificationTableViewController
-                            vc.phoneNumber = obj.data?.userPhone
+                            vc.phoneNumberSt = obj.data?.userPhone
                             navigationController?.pushViewController(vc, animated: true)
                         }
                         
                     }
                 } else {
-                    snackBarMessage(snackManager: snackManager, snackBarMessage: snackBarMessage, title: "\(error?.localizedDescription ?? "")")
+                    snackBarMessage(snackManager: snackManager, snackBarMessage: snackBarMessage, title: "\("Check  Phone Number" ?? "")")
                 }
             }
         } else {

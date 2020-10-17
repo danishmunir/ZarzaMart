@@ -62,6 +62,22 @@ class LandingPopularMenuTableViewCell: UITableViewCell {
         
     }
     
+    func Search_VarientConfigureCell(products: Search_Varient)  {
+        
+        productNameLbl.text = products.varientDescription
+        discriptionLbl.text = products.varientDescription
+        quatityLbl.text = "\(products.quantity ?? 0)"
+        kgLbl.text = products.unit?.rawValue
+        cancelPriceLbl.text = "\(products.mrp ?? 0)"
+        let imageUrl = URL(string : Endpoints.ImgBaseUrl +  UnwarppingValue(value: products.varientImage))
+        imgView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        imgView.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: ""))
+        
+        
+    }
+    
+    
+    
     func varientconfigureCell(products: productVarients_Data)  {
         
         productNameLbl.text = products.datumDescription

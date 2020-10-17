@@ -98,6 +98,17 @@ extension ProfileTabViewController: UITableViewDelegate, UITableViewDataSource {
             let vc = story.instantiateViewController(identifier: "TermsAndPolicyViewController") as! TermsAndPolicyViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        else if indexPath.row == 3 {
+            let items = ["This app is my favorite itms-apps://itunes.apple.com/app/id1534372332"]
+            let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            self.present(ac, animated: true)
+        }
+        else if indexPath.row == 4 {
+            UserDefaults.standard.setValue(false, forKey: "activateLogin")
+            let story = UIStoryboard(name: "Main", bundle: nil)
+            let vc = story.instantiateViewController(identifier: "LoginTableViewController") as! LoginTableViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

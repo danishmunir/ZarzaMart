@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 import CoreLocation
 import CoreData
-
+import JJFloatingActionButton
 class LandingViewController: UIViewController {
     //MARK:- Outlests
     @IBOutlet weak var mainTblView: UITableView!
@@ -19,7 +19,7 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var locationLabelTop: UILabel!
     @IBOutlet weak var cartItemsCountTopImg: UIImageView!
     @IBOutlet weak var cartItemsCountTopLabel: UILabel!
-    
+    fileprivate let actionButton = JJFloatingActionButton()
     
     
     var countTap: Int = 1
@@ -60,7 +60,7 @@ class LandingViewController: UIViewController {
     //MARK:- LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureFloatin()
         fetchData()
         //saveData(productName: "Potato", variendID: 2, value: 2)
         getCurrentLocation()
@@ -214,7 +214,6 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
         vc.productsArray = arrListing
         vc.selectedIndex = indexPath.row
         vc.products = arrListing[indexPath.row]
-        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -402,7 +401,7 @@ extension LandingViewController {
                     mainTblView.reloadData()
                 }
                 else{
-                    print(obj.message)
+                    print(obj.message!)
                 }
             }
         }
@@ -425,7 +424,7 @@ extension LandingViewController {
                     catagoryCollectionView.reloadData()
                 }
                 else{
-                    print(obj.message)
+                    print(obj.message!)
                 }
             }
         }
@@ -725,12 +724,83 @@ extension LandingViewController {
                        
                     }
                     else{
-                        print(obj.message)
+                        print(obj.message!)
                     }
                 }
             }
         }
 
+
+}
+extension LandingViewController{
+    func configureFloatin() {
+        actionButton.itemAnimationConfiguration = .circularSlideIn(withRadius: 120)
+                actionButton.buttonAnimationConfiguration = .rotation(toAngle: .pi * 3 / 4)
+                actionButton.buttonAnimationConfiguration.opening.duration = 0.8
+                actionButton.buttonAnimationConfiguration.closing.duration = 0.6
+        actionButton.buttonColor = UIColor(named: "Greenish")!
+        actionButton.buttonImage = #imageLiteral(resourceName: "support-1")
+                actionButton.addItem(image: #imageLiteral(resourceName: "call_answer")) { item in
+                    self.showAlert("+91 99955 14341")
+                    
+                }
+
+                actionButton.addItem(image: #imageLiteral(resourceName: "reviews")) { item in
+                    self.openAppStore()
+                }
+
+                actionButton.addItem(image: #imageLiteral(resourceName: "mywhatsapp")) { item in
+                    self.whatspp()
+                }
+
+                actionButton.addItem(image: #imageLiteral(resourceName: "share_via")) { item in
+                    self.share()
+                }
+
+                actionButton.display(inViewController: self)
+    }
+    
+    func whatspp() {
+        
+        let phoneNumber =  "+919995514341" // you need to change this number
+        let appURL = URL(string: "https://wa.me/\(phoneNumber)")!
+        if UIApplication.shared.canOpenURL(appURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(appURL)
+            }
+        }
+
+    }
+    
+    //MARK:- openAppStore
+    func openAppStore() {
+        if let url = URL(string: "itms-apps://itunes.apple.com/app/id1534372332"),
+           UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url, options: [:]) { (opened) in
+                if(opened){
+                    print("App Store Opened")
+                }
+            }
+        } else {
+            print("Can't Open URL on Simulator")
+        }
+    }
+    
+    func showAlert(_ title: String) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func share(){
+        let items = ["This app is my favorite itms-apps://itunes.apple.com/app/id1534372332"]
+        // let items = [URL(string: "https://www.apple.com")!]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        self.present(ac, animated: true)
+    }
 
 }
 

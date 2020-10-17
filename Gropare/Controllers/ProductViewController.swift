@@ -16,8 +16,10 @@ class ProductViewController: UIViewController {
     var arrListing = [productVarients_Data]()
     @IBOutlet weak var kg: UILabel!
     var products: Products_Data?
+    var searchedproductId = Int()
     var cartArray : [databaseCart] = []
     let http = HTTPService()
+    var fromSearchView : Bool =  false
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var cancelPrice: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -48,14 +50,14 @@ class ProductViewController: UIViewController {
             price.text = "\(Double((products?.price!)!) * Double(count))"
             countBtn.setTitle(String(count), for: .normal)
             countBtn.backgroundColor = .white
-            addBtn.isHidden = false
-            subBtn.isHidden = false
+           // addBtn.isHidden = false
+           // subBtn.isHidden = false
         } else {
             price.text = "\(products?.price ?? 0)"
             countBtn.setTitle("+", for: .normal)
             countBtn.backgroundColor = UIColor(named: "Greenish")
-            addBtn.isHidden = true
-            subBtn.isHidden = true
+           // addBtn.isHidden = true
+           // subBtn.isHidden = true
         }
     }
     
@@ -104,7 +106,6 @@ class ProductViewController: UIViewController {
     }
     @IBAction func subBtnTapped(_ sender: Any) {
         deleteFeed(id: (products?.varientID!)!)
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
             let btnTitile = Int((countBtn.titleLabel?.text)!)!
             let vid =  products?.varientID!
@@ -179,7 +180,7 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
             saveData(productName: arrListing[indexPath.row].datumDescription!, variendID: arrListing[indexPath.row].varientID!)
             DispatchQueue.main.async {
                 tableView.reloadData()
-
+            
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 addItemsServerHit(qty: Int((popularCell.countButton.titleLabel?.text)!)! , varient_id: arrListing[indexPath.row].varientID!, store_id: arrListing[indexPath.row].storeID!)
@@ -286,6 +287,7 @@ extension ProductViewController {
                     print(v as Any)
                 }
                 count = result.count
+                countBtn.titleLabel?.text = "\(count)"
             } else {
                 
             }
@@ -338,6 +340,7 @@ extension ProductViewController {
                         arrCart.append($0)
                     }
                     tableView.reloadData()
+                    searchItemInCart(vId: varient_id)
                 }
             }
             else{
@@ -348,6 +351,28 @@ extension ProductViewController {
     
     func serverHitforVarient(){
         let dict = ["product_id": products?.productID ?? 1 ,"lat":"12.74","lng":"74.90"] as [String : Any]
+        http.requestWithPost(parameters: dict, Url: Endpoints.varient) { [self] (response, error) in
+            DispatchQueue.main.async { [self] in
+                let jsonData = response?.toJSONString1().data(using: .utf8)
+                let decoder = JSONDecoder()
+                let obj = try! decoder.decode(ProductVarient.self, from: jsonData!)
+                if obj.status == "1"{
+                    if let arrayofBanner = obj.data{
+                        _ = arrayofBanner.map{
+                            self.arrListing.append($0)
+                        }
+                    }
+                    tableView.reloadData()
+            
+                }
+                else{
+                    print(obj.message)
+                }
+            }
+        }
+    }
+    func serverHitforVarientforSearch(productId : Int){
+        let dict = ["product_id": productId ,"lat":"12.74","lng":"74.90"] as [String : Any]
         http.requestWithPost(parameters: dict, Url: Endpoints.varient) { [self] (response, error) in
             DispatchQueue.main.async { [self] in
                 let jsonData = response?.toJSONString1().data(using: .utf8)

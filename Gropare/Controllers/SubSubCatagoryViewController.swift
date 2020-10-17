@@ -46,14 +46,14 @@ class SubSubCatagoryViewController: UIViewController {
             price.text = "\(Double((products?.price!)!) * Double(count))"
             countBtn.setTitle(String(count), for: .normal)
             countBtn.backgroundColor = .white
-            addBtn.isHidden = false
-            subBtn.isHidden = false
+            //addBtn.isHidden = false
+            //subBtn.isHidden = false
         } else {
             price.text = "\(products?.price ?? 0)"
             countBtn.setTitle("+", for: .normal)
             countBtn.backgroundColor = UIColor(named: "Greenish")
-            addBtn.isHidden = true
-            subBtn.isHidden = true
+            //addBtn.isHidden = true
+            //subBtn.isHidden = true
         }
     }
     
@@ -226,6 +226,7 @@ extension SubSubCatagoryViewController {
                         arrCart.append($0)
                     }
                     tableView.reloadData()
+                    searchItemInCart(vId: varient_id)
                 }
             }
             else{

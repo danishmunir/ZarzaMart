@@ -150,7 +150,7 @@ extension ProfileTableViewController {
     
     func serverhitUpdateNotifications() {
         
-        let dict =  ["user_id": UserDefaults.standard.string(forKey: "user_id")!, "sms" : smsSwitchInt , "app" : inAppSwitchInt , "email" : emailSwitchInt] as [String : Any]
+        let dict =  ["user_id": UserDefaults.standard.string(forKey: "user_id")!, "sms" : smsSwitchInt , "app" : inAppSwitchInt , "email" : 0] as [String : Any]
         http.requestWithPost(parameters: dict as [String : Any], Url: Endpoints.updateNotify) { (response, error) in
             DispatchQueue.main.async {
                 let jsonData = response?.toJSONString1().data(using: .utf8)

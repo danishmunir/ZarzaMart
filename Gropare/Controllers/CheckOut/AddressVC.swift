@@ -83,7 +83,7 @@ class AddressVC: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        if txtFieldPinincode.text != "" && txtFieldHouseNo.text != "" && txtFieldCity.text != "" && txtFieldState.text != "" && txtFieldArea.text != "" && txtFieldLandMark.text != "" && txtFieldName.text != "" && txtFieldNumber.text != "" && txtFieldAlterNumber.text != "" {
+        if txtFieldPinincode.text != "" && txtFieldHouseNo.text != "" && txtFieldCity.text != "" && txtFieldState.text != "" && txtFieldArea.text != ""  && txtFieldName.text != "" && txtFieldNumber.text != "" {
             if isAddAddress {
                 self.serverHitForAddress()
             } else {

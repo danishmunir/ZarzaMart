@@ -11,6 +11,7 @@ target 'Gropare' do
 	pod 'razorpay-pod', '~> 1.1.5'
   pod 'IBAnimatable'
   pod 'CarbonKit'
+  pod 'JJFloatingActionButton'
 
   # Pods for Gropare
 

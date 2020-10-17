@@ -2,6 +2,7 @@ PODS:
   - CarbonKit (2.3.1)
   - FSCalendar (2.8.1)
   - IBAnimatable (6.1.0)
+  - JJFloatingActionButton (2.5.0)
   - KKPinCodeTextField (1.0.0)
   - MaterialComponents/AnimationTiming (118.0.0)
   - MaterialComponents/Availability (118.0.0)
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - CarbonKit
   - FSCalendar
   - IBAnimatable
+  - JJFloatingActionButton
   - KKPinCodeTextField
   - MaterialComponents/Snackbar
   - razorpay-pod (~> 1.1.5)
@@ -88,6 +90,7 @@ SPEC REPOS:
     - CarbonKit
     - FSCalendar
     - IBAnimatable
+    - JJFloatingActionButton
     - KKPinCodeTextField
     - MaterialComponents
     - MDFInternationalization
@@ -99,6 +102,7 @@ SPEC CHECKSUMS:
   CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
+  JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   KKPinCodeTextField: 63a1fb841fd6a412cf664ef64dc065fc6767bd3c
   MaterialComponents: 333a09d55de4bc53e0e2e08f178c6f29cfe8645f
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -106,6 +110,6 @@ SPEC CHECKSUMS:
   razorpay-pod: 6ee0c8c7afad8eead9524d5eb516bc35ac1604ef
   SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
 
-PODFILE CHECKSUM: f462481651154e65b21344c4a1ec3201ba72e18e
+PODFILE CHECKSUM: 1d37111753008bb92a96b0a3b6c135e1e07bea50
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0.beta.1

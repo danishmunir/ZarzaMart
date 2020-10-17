@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
+    var arrListing = [Search_Varient]()
     let http = HTTPService()
     var arrSearch = [Search_Datum]()
     @IBOutlet weak var tableView: UITableView!
@@ -35,11 +35,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = arrSearch[indexPath.row].productName
-        return UITableViewCell()
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let vc = story.instantiateViewController(identifier: "searchProductViewController") as! searchProductViewController
+        vc.fromSearchView = true
+        vc.searchedproductId =  arrSearch[indexPath.row].productID!
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
@@ -61,10 +68,9 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
-
-
 extension SearchViewController {
     func SearchList(keyword  : String) {
+        arrSearch.removeAll()
         let dict = ["keyword":keyword,"lat":"12.70","lng":"74.94", "city":"Manjeshwar"]
         
         http.requestWithPost(parameters: dict, Url: Endpoints.searchData) { [self] (response, error) in

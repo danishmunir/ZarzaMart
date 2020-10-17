@@ -10,6 +10,10 @@ import Foundation
 //MARK:-Data Model
 //Registeration
 
+struct OTP: Codable {
+    let status: Int?
+    let message: String?
+}
 struct Register: Codable {
     let status, message: String?
     let data: Register_DataClass?
@@ -40,7 +44,68 @@ struct Register_DataClass: Codable {
     }
 }
 
+// MARK: - OTPResult
+struct OTPResult: Codable {
+    let status, message: String?
+    let data: [OTPResult_Datum]?
+}
 
+// MARK: - OTPResult_Datum
+struct OTPResult_Datum: Codable {
+    let userID: Int?
+    let userName, userPhone, userEmail, deviceID: String?
+    let userImage, userPassword, otpValue: String?
+    let status, wallet, rewards, isVerified: Int?
+    let block: Int?
+    let regDate: String?
+
+    enum CodingKeys: String, CodingKey {
+        case userID = "user_id"
+        case userName = "user_name"
+        case userPhone = "user_phone"
+        case userEmail = "user_email"
+        case deviceID = "device_id"
+        case userImage = "user_image"
+        case userPassword = "user_password"
+        case otpValue = "otp_value"
+        case status, wallet, rewards
+        case isVerified = "is_verified"
+        case block
+        case regDate = "reg_date"
+    }
+}
+
+
+// MARK: - Welcome
+struct changePassword: Codable {
+    let status, message: String?
+    let data: [changePassword_Datum]?
+}
+
+// MARK: - Datum
+struct changePassword_Datum: Codable {
+    let userID: Int?
+    let userName, userPhone, userEmail, deviceID: String?
+    let userImage, userPassword, otpValue: String?
+    let status, wallet, rewards, isVerified: Int?
+    let block: Int?
+    let regDate: String?
+
+    enum CodingKeys: String, CodingKey {
+        case userID = "user_id"
+        case userName = "user_name"
+        case userPhone = "user_phone"
+        case userEmail = "user_email"
+        case deviceID = "device_id"
+        case userImage = "user_image"
+        case userPassword = "user_password"
+        case otpValue = "otp_value"
+        case status, wallet, rewards
+        case isVerified = "is_verified"
+        case block
+        case regDate = "reg_date"
+    }
+}
 // MARK: - AddCart
 struct AddCart: Codable {
     let status, message: String?

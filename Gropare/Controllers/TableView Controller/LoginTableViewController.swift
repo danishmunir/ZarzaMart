@@ -32,9 +32,15 @@ class LoginTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginBtn.layer.cornerRadius = 5
-        onTapClick(target: self, #selector(dismissKeyboard))
-        phoneTF.text = "9633048339"
-        passwordTF.text = "123456"
+       
+//        phoneTF.text = "9633048339"
+//        passwordTF.text = "123456"
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,9 +172,6 @@ class LoginTableViewController: UITableViewController {
     
     //MARK: - Functions
     
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
-    }
     func loadindIndicator(){
         
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))

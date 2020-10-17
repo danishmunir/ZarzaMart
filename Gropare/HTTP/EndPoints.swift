@@ -70,6 +70,14 @@ struct Endpoints{
     static var varient  = "http://admin.zarzamart.com/api/varient"
     
     
+    static var verify_phone  = "http://admin.zarzamart.com/api/verify_phone"
+    
+    static var forget_password  = "http://admin.zarzamart.com/api/forget_password"
+    
+    
+    static var change_password  = "http://admin.zarzamart.com/api/change_password"
+    
+    
    
     
     

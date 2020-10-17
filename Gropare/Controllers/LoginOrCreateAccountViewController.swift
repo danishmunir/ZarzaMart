@@ -17,6 +17,12 @@ class LoginOrCreateAccountViewController: UIViewController {
         
         loginBtn.layer.cornerRadius = 5
         createAccountBtn.layer.cornerRadius = 5
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

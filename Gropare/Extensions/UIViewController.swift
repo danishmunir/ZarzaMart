@@ -23,6 +23,5 @@ extension UIViewController {
         snackBarMessage.duration = 3
         MDCSnackbarMessageView.appearance().snackbarMessageViewBackgroundColor = UIColor(named: "Pinkish")
         snackManager.show(snackBarMessage)
-        
     }
 }

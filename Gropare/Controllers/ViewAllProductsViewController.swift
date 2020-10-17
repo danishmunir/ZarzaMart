@@ -15,14 +15,12 @@ class ViewAllProductsViewController: UIViewController {
     var selected  =  Int()
     var cartArray : [databaseCart] = []
     var arrCart = [CartItem]()
+    @IBOutlet weak var tableView: UITableView!
     //MARK:- CoreData
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate //Singlton instance
     var context:NSManagedObjectContext!
-    
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+
     let activity = UIActivityIndicatorView()
     
     let http = HTTPService()

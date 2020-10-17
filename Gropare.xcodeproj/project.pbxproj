@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D804DB080C3D1E41DEC174C /* Pods_Gropare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D26E23C6AB7B627F4A8D84D /* Pods_Gropare.framework */; };
+		4FAA53A8253A0E3D00B2F7FB /* ViewAllSearchProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA53A7253A0E3D00B2F7FB /* ViewAllSearchProductsViewController.swift */; };
+		4FAA53BD253A2D7400B2F7FB /* searchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA53BC253A2D7400B2F7FB /* searchProductViewController.swift */; };
 		82D310F5B777326FC8826FA3 /* Pods_GropareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4284227653A7CB553E89CF /* Pods_GropareTests.framework */; };
 		EF868957CB866C3EEF75B16C /* Pods_Gropare_GropareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D78DD89720DE3154EE2CA2 /* Pods_Gropare_GropareUITests.framework */; };
 		F70C0425253454710065DA46 /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C0424253454710065DA46 /* CommonClass.swift */; };
@@ -86,7 +88,6 @@
 		F7F571B22539D3950039980F /* SubSubCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F571B12539D3950039980F /* SubSubCatagoryViewController.swift */; };
 		F7F571C52539DA930039980F /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F571C42539DA930039980F /* OrderVC.swift */; };
 		F7F571E82539DD6F0039980F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F571E72539DD6F0039980F /* UIView.swift */; };
-		F7F93E63252DCF0900701D42 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F93E62252DCF0900701D42 /* UINavigationController.swift */; };
 		F7F93E6C252DCFDA00701D42 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F93E6B252DCFDA00701D42 /* LoginTableViewController.swift */; };
 		F7F93E9C252DFA6C00701D42 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F93E9B252DFA6C00701D42 /* SignUpTableViewController.swift */; };
 		F7F93EAE252E008600701D42 /* OTPVerificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F93EAD252E008600701D42 /* OTPVerificationTableViewController.swift */; };
@@ -119,6 +120,8 @@
 		242973D016448C2CEFCAB5B6 /* Pods-Gropare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gropare.debug.xcconfig"; path = "Target Support Files/Pods-Gropare/Pods-Gropare.debug.xcconfig"; sourceTree = "<group>"; };
 		36A725CCD2189288240F88B4 /* Pods-GropareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GropareTests.release.xcconfig"; path = "Target Support Files/Pods-GropareTests/Pods-GropareTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E4284227653A7CB553E89CF /* Pods_GropareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GropareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FAA53A7253A0E3D00B2F7FB /* ViewAllSearchProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllSearchProductsViewController.swift; sourceTree = "<group>"; };
+		4FAA53BC253A2D7400B2F7FB /* searchProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchProductViewController.swift; sourceTree = "<group>"; };
 		919C16D972DF13ED6B372DB6 /* Pods-GropareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GropareTests.debug.xcconfig"; path = "Target Support Files/Pods-GropareTests/Pods-GropareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90A72002F80D297B01E5820 /* Pods-Gropare-GropareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gropare-GropareUITests.release.xcconfig"; path = "Target Support Files/Pods-Gropare-GropareUITests/Pods-Gropare-GropareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D3D78DD89720DE3154EE2CA2 /* Pods_Gropare_GropareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gropare_GropareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,7 +208,6 @@
 		F7F571B12539D3950039980F /* SubSubCatagoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSubCatagoryViewController.swift; sourceTree = "<group>"; };
 		F7F571C42539DA930039980F /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		F7F571E72539DD6F0039980F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		F7F93E62252DCF0900701D42 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = "../../../../Customer Order App/CustomerServiceApp-master/CustomerOrderingApp/Extensions/UINavigationController.swift"; sourceTree = "<group>"; };
 		F7F93E6B252DCFDA00701D42 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		F7F93E9B252DFA6C00701D42 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		F7F93EAD252E008600701D42 /* OTPVerificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationTableViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +383,8 @@
 				F7B4C5F725384C4D002C7280 /* ProductViewController.swift */,
 				F70D05EC2538A3D500D3859C /* OrderSummaryViewController.swift */,
 				F7F571B12539D3950039980F /* SubSubCatagoryViewController.swift */,
+				4FAA53A7253A0E3D00B2F7FB /* ViewAllSearchProductsViewController.swift */,
+				4FAA53BC253A2D7400B2F7FB /* searchProductViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -591,7 +595,6 @@
 		F7F93E61252DCEF200701D42 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F7F93E62252DCF0900701D42 /* UINavigationController.swift */,
 				F7F93EC4252E052500701D42 /* Dictionary.swift */,
 				F7ABE7DC25307C18007B2E4A /* UIImageView.swift */,
 				F7ABE81D25308D3A007B2E4A /* Constants.swift */,
@@ -908,6 +911,7 @@
 				F7F93E9C252DFA6C00701D42 /* SignUpTableViewController.swift in Sources */,
 				F7F570F72539A6E30039980F /* OrderSuccessfullVC.swift in Sources */,
 				F748374D252F4F040050AA64 /* NewPasswordViewController.swift in Sources */,
+				4FAA53BD253A2D7400B2F7FB /* searchProductViewController.swift in Sources */,
 				F7F571452539AF910039980F /* RPicker.swift in Sources */,
 				F7F93ECF252E059B00701D42 /* DataModel.swift in Sources */,
 				F7F3BA8925370D8F005B1BC6 /* TermsAndPolicyViewController.swift in Sources */,
@@ -934,11 +938,11 @@
 				F7F571582539B6A00039980F /* OrderDetailsTableViewCell.swift in Sources */,
 				F7ABE8772530A28C007B2E4A /* LandingCatagoryCollectionViewCell.swift in Sources */,
 				F7ABE85025309B3E007B2E4A /* LandingBannerCollectionViewCell.swift in Sources */,
-				F7F93E63252DCF0900701D42 /* UINavigationController.swift in Sources */,
 				F70F700A2534983F0047ECD3 /* ViewAllCatagoryViewController.swift in Sources */,
 				F7F3BA8425370D5C005B1BC6 /* AboutUsViewController.swift in Sources */,
 				F7F3BA392536E933005B1BC6 /* ProfileTabListTableViewCell.swift in Sources */,
 				F7ABE7D5253078C9007B2E4A /* LandingViewController.swift in Sources */,
+				4FAA53A8253A0E3D00B2F7FB /* ViewAllSearchProductsViewController.swift in Sources */,
 				F764592A252DB6E60058A024 /* AppDelegate.swift in Sources */,
 				F70C053F253484A50065DA46 /* ViewAllProductsViewController.swift in Sources */,
 				F70F705C2534A65F0047ECD3 /* SubCatagoriesViewController.swift in Sources */,
@@ -1126,16 +1130,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6BSRK4S25P;
+				DEVELOPMENT_TEAM = 7257DHNQZP;
 				INFOPLIST_FILE = Gropare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gropare.itrid.Gropare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zarzamart.astuteo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1146,16 +1150,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6BSRK4S25P;
+				DEVELOPMENT_TEAM = 7257DHNQZP;
 				INFOPLIST_FILE = Gropare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gropare.itrid.Gropare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zarzamart.astuteo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
